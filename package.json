@@ -4,8 +4,11 @@
   "description": "",
   "scripts": {
     "init-nextjs": "pnpm run -C nextjs init",
+    "init-vite-vue3": "pnpm run -C vite-vue3 init",
     "start-nextjs": "pnpm run -C nextjs start",
-    "build-nextjs": "pnpm run -C nextjs build"
+    "start-vite-vue3": "pnpm run -C vite-vue3 start",
+    "build-nextjs": "pnpm run -C nextjs build",
+    "build-vite-vue3": "pnpm run -C vite-vue3 build"
   },
   "keywords": [],
   "author": "",

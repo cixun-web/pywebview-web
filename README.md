@@ -1,7 +1,6 @@
 # pywebview + Next.js/Vue
 
 > 该项目pnpm管理pywebview + Next.js/Vue的两个项目模板，以供大家参考使用。
-> The project pnpm manages two project templates for pywebview + Next.js/Vue for your reference
 
 ## 环境说明
 1. node 本人是使用nvm管理node版本，当前node版本为v18.1.0
@@ -23,4 +22,9 @@
 ### build
 
 打包成可执行文件
+
+## 额外说明
+
+1. 在nextJs中是将代码生成静态可执行文件，这就导致对于next export不支持的都不能在此项目中使用，详情请自己查看nextJs的文档
+.....
 
