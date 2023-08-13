@@ -1,0 +1,13 @@
+{
+  "name": "pywebview-web",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "init-nextjs": "pnpm run -C nextjs init",
+    "start-nextjs": "pnpm run -C nextjs start",
+    "build-nextjs": "pnpm run -C nextjs build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
