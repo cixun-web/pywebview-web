@@ -4,19 +4,19 @@ import shutil
 
 from distutils.core import setup
 
-def tree(src):
-    return [(root, map(lambda f: os.path.join(root, f), files))
-        for (root, dirs, files) in os.walk(os.path.normpath(src))]
+APP_NAME = 'NextJs'
+VERSION = '1.0.0'
 
-
+# 将以前的删除掉
 if os.path.exists('build'):
     shutil.rmtree('build')
 
-if os.path.exists('dist/index.app'):
-    shutil.rmtree('dist/index.app')
+if os.path.exists('dist' + APP_NAME + '.app'):
+    shutil.rmtree('dist' + APP_NAME + '.app')
 
 ENTRY_POINT = ['src/index.py']
 
+# 存放所有要用到的文件资源
 DATA_FILES = [
     ('gui', ['gui/']),
 ]
@@ -24,9 +24,13 @@ DATA_FILES = [
 OPTIONS = {
     'argv_emulation': False,
     'strip': False,
-    'iconfile': 'src/assets/logo.icns',
+    'iconfile': 'src/assets/logo.icns', # app的图标，必须为icns的格式，其他格式的话是不会显示出来的
     'packages': ['WebKit', 'Foundation', 'webview'],
     'plist': {
+        'CFBundleName'   : APP_NAME,     # 应用名
+        'CFBundleDisplayName': APP_NAME, # 应用显示名
+        'CFBundleVersion': VERSION,      # 应用版本号
+        'CFBundleIdentifier' : APP_NAME, # 应用包名、唯一标识
         'NSRequiresAquaSystemAppearance': False
     },
     'resources': DATA_FILES
