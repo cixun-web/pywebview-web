@@ -2,6 +2,7 @@ venv*
 gui
 pywebview.egg-info
 dist
+build
 
 # Logs
 logs

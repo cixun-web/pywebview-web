@@ -4,6 +4,7 @@ venv*
 gui
 pywebview.egg-info
 dist
+build
 # dependencies
 /node_modules
 /.pnp
